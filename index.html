@@ -634,7 +634,7 @@ svg.paradox-svg text[direction="ltr"] {
     <div class="mirror-grid" id="mirror-view" aria-label="תצוגת מראה כפולה של שני המחנות">
       
       <div class="mirror-col">
-        <div class="lumi-body-m-emphasized">מחנה ״בית המשפט תמיד משקר״</div>
+        <div class="lumi-body-m-emphasized">מחנה ״הכל תפור״</div>
         <div class="mirror-step is-active" data-mirror-step="0">
           <div class="lumi-body-s" style="color: var(--on-surface-variant);">שלב 1 · אקסיומת הבסיס</div>
           <div class="lumi-body-m">בית המשפט תמיד משקר והתיקים תפורים מהיסוד</div>
@@ -655,7 +655,7 @@ svg.paradox-svg text[direction="ltr"] {
 
       
       <div class="mirror-col">
-        <div class="lumi-body-m-emphasized">מחנה ״תמיד מקשיבים לשופטים״</div>
+        <div class="lumi-body-m-emphasized">מחנה ״הכל קדוש״</div>
         <div class="mirror-step is-active" data-mirror-step="0">
           <div class="lumi-body-s" style="color: var(--on-surface-variant);">שלב 1 · אקסיומת הבסיס</div>
           <div class="lumi-body-m">שופטי ישראל הם המבוגר האחראי – חובה לכבד כל מילה של בית המשפט</div>
@@ -679,7 +679,7 @@ svg.paradox-svg text[direction="ltr"] {
     <div class="detail-panel" aria-live="polite">
       <div class="detail-header">
         <span id="detail-step-title" class="lumi-body-m-emphasized">שלב 1 מתוך 4 · אקסיומת הבסיס</span>
-        <span id="detail-camp-tag" class="lumi-body-s" style="color: var(--on-surface-variant);">מחנה ״בית המשפט תמיד משקר״</span>
+        <span id="detail-camp-tag" class="lumi-body-s" style="color: var(--on-surface-variant);">מחנה ״הכל תפור״</span>
       </div>
       <p id="detail-step-quote" class="lumi-body-l" style="margin: 0;">
         ״בית המשפט תמיד משקר והתיקים תפורים מהיסוד״
@@ -709,10 +709,10 @@ svg.paradox-svg text[direction="ltr"] {
       </div>
       <div class="camp-tabs" role="tablist" aria-label="בחירת מחנה">
         <button type="button" class="camp-tab-btn is-active" role="tab" aria-selected="true" tabindex="0" data-camp="camp_tafur">
-          מחנה ״בית המשפט תמיד משקר״
+          מחנה ״הכל תפור״
         </button>
         <button type="button" class="camp-tab-btn" role="tab" aria-selected="false" tabindex="-1" data-camp="camp_shomrim">
-          מחנה ״תמיד מקשיבים לשופטים״
+          מחנה ״הכל קדוש״
         </button>
         <button type="button" class="camp-tab-btn" role="tab" aria-selected="false" tabindex="-1" data-camp="mirror">
           תצוגת מראה כפולה (שני המחנות יחד)
@@ -774,7 +774,7 @@ function setSvgText(el, value) {
 
 const CAMP_DATA = {
   camp_tafur: {
-    label: 'מחנה ״בית המשפט תמיד משקר״',
+    label: 'מחנה ״הכל תפור״',
     steps: [
       {
         stageTitle: 'שלב 1 מתוך 4 · אקסיומת הבסיס',
@@ -844,7 +844,7 @@ const CAMP_DATA = {
     }
   },
   camp_shomrim: {
-    label: 'מחנה ״תמיד מקשיבים לשופטים״',
+    label: 'מחנה ״הכל קדוש״',
     steps: [
       {
         stageTitle: 'שלב 1 מתוך 4 · אקסיומת הבסיס',
@@ -1063,8 +1063,8 @@ function renderFlowchartAndDetails() {
     }
     if (detailAnalysis) {
       if (detailAnalysis) detailAnalysis.innerHTML =
-        '<span class="lumi-body-m-emphasized">מחנה ״בית המשפט תמיד משקר״:</span> ' + tStep.quote +
-        ' <br><span class="lumi-body-m-emphasized">מחנה ״תמיד מקשיבים לשופטים״:</span> ' + sStep.quote;
+        '<span class="lumi-body-m-emphasized">מחנה ״הכל תפור״:</span> ' + tStep.quote +
+        ' <br><span class="lumi-body-m-emphasized">מחנה ״הכל קדוש״:</span> ' + sStep.quote;
     }
   } else {
     if (detailTitle) detailTitle.innerHTML = stepObj.stageTitle;
@@ -1090,8 +1090,8 @@ function renderFlowchartAndDetails() {
         const r2 = CAMP_DATA.camp_shomrim.rescues[state.rescue];
         if (rescueTitle) rescueTitle.innerHTML = r1.title + ' — המחיר הלוגי בשני המחנות:';
         if (rescueBody) rescueBody.innerHTML =
-          '<div style="margin-bottom:6px;"><span class="lumi-body-m-emphasized">מחנה ״בית המשפט תמיד משקר״:</span> ' + r1.text + '</div>' +
-          '<div><span class="lumi-body-m-emphasized">מחנה ״תמיד מקשיבים לשופטים״:</span> ' + r2.text + '</div>';
+          '<div style="margin-bottom:6px;"><span class="lumi-body-m-emphasized">מחנה ״הכל תפור״:</span> ' + r1.text + '</div>' +
+          '<div><span class="lumi-body-m-emphasized">מחנה ״הכל קדוש״:</span> ' + r2.text + '</div>';
       } else {
         if (rescueTitle) rescueTitle.innerHTML = rescueObj.title + ':';
         if (rescueBody) rescueBody.innerHTML = rescueObj.text;
